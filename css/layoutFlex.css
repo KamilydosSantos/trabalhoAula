@@ -1,0 +1,55 @@
+/*LAYOUT - GERAL*/
+
+@media screen and (min-width:0px) {
+    .panel {
+        max-width: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box {
+        background-color: white;
+        flex: 1 1 300px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    #panel_addNote {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        visibility: collapse;
+    }
+    #panel_addNote form {
+        background-color: rgba(0, 0, 0, .8);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+}
+
+
+/*LAYOUT - DESKTOP*/
+
+@media screen and (min-width:800px) {
+    .panel {
+        padding-left: 50px;
+        transition: padding 0.5s;
+    }
+    #leftBar:hover~.panel {
+        padding-left: 300px;
+        transition: padding 0.5s;
+    }
+    #panel_addNote form {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #panel_addNote form {
+        width: 300px;
+    }
+}

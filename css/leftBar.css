@@ -1,0 +1,84 @@
+/*GERAL*/
+
+@media screen and (min-width: 0px) {
+    #leftBar {
+        background-color: rgba(0, 0, 0, .6);
+    }
+    #logo {
+        display: block;
+        width: 200px;
+    }
+    #info_User p {
+        display: block;
+        color: white;
+        text-align: center;
+    }
+    #leftBar a {
+        display: block;
+        color: white;
+    }
+    #leftBar a:hover {
+        background-color: rgba(0, 140, 255, .5);
+        color: white;
+    }
+    #leftBar a:active {
+        background-color: rgb(0, 80, 255);
+    }
+}
+
+
+/*RESPONSIVIDADE - DESKTOP*/
+
+@media screen and (min-width: 800px) {
+    #leftBar {
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: 300px;
+        left: -250px;
+        transition: all 0.5s;
+    }
+    #logo {
+        margin: 20px auto;
+    }
+    #info_User p {
+        padding: 10px 0px;
+    }
+    #leftBar ul {
+        width: 100%;
+    }
+    #leftBar:hover {
+        transform: translateX(250px);
+    }
+    #leftBar a {
+        padding: 20px;
+    }
+}
+
+
+/*RESPONSIVIDADE - MOBILE*/
+
+@media screen and (max-width: 800px) {
+    #leftBar {
+        height: auto;
+        width: 100%;
+    }
+    #logo {
+        margin: 0 auto;
+    }
+    #info_User p {
+        padding-bottom: 10px;
+        border-bottom: solid 1px black;
+    }
+    #leftBar ul {
+        background-color: rgba(100, 100, 100, .6);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #leftBar li {
+        margin: 0 auto;
+    }
+    #leftBar a {
+        padding: 10px 5px;
+    }
+}
