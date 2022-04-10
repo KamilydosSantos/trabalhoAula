@@ -4,7 +4,6 @@ body {
 }
 
 #boxForm {
-    background-color: rgba(20, 40, 100, 0.7);
     width: 300px;
     padding: 50px 50px;
     border-radius: 10px;
@@ -17,7 +16,6 @@ body {
 }
 
 #boxForm form h1 {
-    color: rgba(100, 200, 255, 1);
     margin: 10px 0px;
 }
 
@@ -27,21 +25,13 @@ form ul {
 }
 
 form li {
-    background-color: rgba(0, 0, 0, .4);
     padding: 2px;
     border-radius: 5px;
-    color: rgb(243, 56, 56);
     margin: 5px 0px;
-}
-
-#boxForm form p {
-    color: white;
-    margin: 15px 0px 5px 0px;
 }
 
 #boxForm form a {
     text-align: center;
-    color: white;
     margin: 5px 0px;
 }
 
@@ -56,9 +46,4 @@ form li {
     height: 25px;
     width: 100px;
     border-radius: 5px;
-}
-
-#boxForm form button:hover {
-    background-color: rgba(0, 0, 0, .8);
-    color: white;
 }

@@ -1,15 +1,11 @@
 <?php
-    require_once '../php/controller_userNotes.php';
+    require_once '../php/connect_bd.php';
     session_start();
     $dados = mysqli_fetch_array(mysqli_query($connect, 'SELECT * FROM users WHERE user_id = '.$_SESSION["id"]));
-
-    if(isset($_POST['enviarNote'])){
-        writeNotes();
-    }
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,17 +15,24 @@
     <link rel="stylesheet" href="../css/leftBar.css">
     <link rel="stylesheet" href="../css/layoutFlex.css">
     <link rel="stylesheet" href="../css/styleGeral.css">
+    <link rel="stylesheet" href="../css/themas.css">
     <script src="../js/controller_userNotes.js"></script>
     <?php require_once '../components/leftBar.php';?>
 </head>
 <body>
     
     <section id="panel_addNote">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+        <form action="../php/notas_add.php" method="POST">
             <p>Titulo da nota</p>
             <input type="text" name="tituloNote" id="tituloNote" onkeyup="validateDate()">
             <p>Conteudo da nota</p>
             <textarea name="conteudo" id="conteudo" onkeyup="validateDate()"></textarea>
+            <p>Selecione uma categoria</p>
+            <select class="form-select" id="categoria">
+                <option value="Pessoal">Pessoal</option>
+                <option value="Escola">Escola</option>
+                <option value="Trabalho">Trabalho</option>
+            </select>
             <p id="aviso"></p>
             <button type="button" onclick="setVisible_false()">CANCELAR</button>
             <button type="submit" id="enviarNote" name="enviarNote">SALVAR</button>
@@ -42,7 +45,7 @@
     
     <section class="panel">
         <?php
-            loadNotes();
+            require_once '../php/notas_load.php';
         ?>
     </section>
 </body>

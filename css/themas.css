@@ -1,0 +1,116 @@
+/*geral*/
+
+body {
+    background-color: rgb(220, 220, 220);
+}
+
+
+/*Formulario de Login/Registro*/
+
+#boxForm {
+    background-color: rgb(0, 66, 110);
+    box-shadow: inset 0 0 1em rgb(0, 105, 175), 0 0 1em black;
+}
+
+#boxForm form h1 {
+    color: rgba(100, 200, 255, 1);
+}
+
+form li {
+    background-color: rgba(0, 0, 0, .4);
+    color: rgb(243, 56, 56);
+}
+
+#boxForm form p {
+    color: white;
+}
+
+#boxForm form a {
+    color: white;
+}
+
+#boxForm form button:hover {
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+}
+
+
+/*Barra Lateral*/
+
+#leftBar {
+    background-color: rgb(0, 66, 110);
+}
+
+#info_User p {
+    color: white;
+}
+
+#leftBar a {
+    color: white;
+}
+
+#leftBar a:hover {
+    background-color: rgba(0, 140, 255, .5);
+    color: white;
+}
+
+#leftBar a:active {
+    background-color: rgb(0, 80, 255);
+}
+
+@media screen and (max-width: 800px) {
+    #info_User p {
+        border-bottom: solid 1px black;
+    }
+    #leftBar ul {
+        background-color: rgba(100, 100, 100, .6);
+    }
+}
+
+
+/*Notas*/
+
+.box {
+    background-color: white;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+}
+
+.TitleBox {
+    color: blue;
+}
+
+.TextBox {
+    color: black;
+    border: solid 1px black;
+}
+
+
+/*Formulario de Add Nota*/
+
+#panel_addNote form {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+#setVisible-insertNewNote:hover {
+    background-color: rgba(0, 100, 255, .8);
+    color: white;
+}
+
+#panel_addNote form p {
+    color: white;
+}
+
+#panel_addNote form button:hover {
+    background-color: rgba(0, 100, 255, .8);
+    color: white;
+}
+
+#enviarNote:disabled {
+    background-color: rgba(70, 70, 70, .5);
+    color: rgba(100, 100, 100, .5);
+}
+
+#enviarNote:disabled:hover {
+    background-color: rgba(70, 70, 70, .5);
+    color: rgba(100, 100, 100, .5);
+}

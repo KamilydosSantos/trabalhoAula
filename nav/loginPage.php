@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
     <title>LOGIN</title>
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/themas.css">
     <?php
         $erro= "";
         if(isset($_POST['entrar'])){
