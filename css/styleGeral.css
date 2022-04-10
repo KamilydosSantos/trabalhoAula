@@ -10,6 +10,22 @@
     border-radius: 5px;
 }
 
+.buttons a{
+    border: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    padding: 6px;
+    float: right;
+    margin: 6px 0 0 6px;
+}
+
+.buttons a:hover {
+    cursor: pointer;
+    background-color: #133d55;
+    color: #ffffff;
+}
+
 #setVisible-insertNewNote {
     padding: 5px;
     border-radius: 5px;

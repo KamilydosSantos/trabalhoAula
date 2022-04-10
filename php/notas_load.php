@@ -6,7 +6,20 @@
         $getNote[$cont] = mysqli_fetch_array(mysqli_query($GLOBALS["connect"], $sql));
 
         if($getNote[$cont] != ""){
-            print_r('<div class="box"><p class="TitleBox">'.$getNote[$cont]['titulo'].'</p><p class="TextBox">'.$getNote[$cont]['conteudo'].'</p></div>');
+?>
+            <div class="box">
+                <p class="TitleBox">
+                    <?=  $getNote[$cont]['titulo'] ?>
+                </p>
+                <p class="TextBox">
+                    <?=  $getNote[$cont]['conteudo'] ?>
+                </p>
+                <div class="buttons">
+                    <a>Excuir</a>     
+                    <a>Editar</a>  
+                </div>
+            </div>
+<?php
         }
     }while($getNote[$cont] != "");
 ?>
