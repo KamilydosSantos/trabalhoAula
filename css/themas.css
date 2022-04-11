@@ -1,69 +1,102 @@
+:root {
+    /*Principais        */
+    --fundo_01: rgb(220, 220, 220);
+    --fundo_02: #133d55;
+    /*Formulario login/registro     */
+    --formularioTitulo: rgba(100, 200, 255, 1);
+    --formularioLi: rgba(0, 0, 0, .4);
+    --formularioLi2: rgb(243, 56, 56);
+    --formularioTexto: rgb(255, 255, 255);
+    --formularioButtomHover: rgba(0, 0, 0, .8);
+    --formularioShadow: inset 0 0 1em rgb(0, 105, 175), 0 0 1em black;
+    /*Barra lateral      */
+    --leftBarInformacoes: rgb(255, 255, 255);
+    --leftBarLinks: rgb(255, 255, 255);
+    --leftBarLinksHover: rgb(255, 255, 255);
+    --leftBarLinksHoverBack: rgba(0, 140, 255, .5);
+    --leftBarLinksActive: rgba(0, 140, 255, .5);
+    --leftBar_borderMobile: solid 1px black;
+    --leftBar_mobile: rgba(100, 100, 100, .6);
+    /*Painel de Notas*/
+    --notas_Back: rgb(255, 255, 255);
+    --notas_Titulo: rgba(0, 140, 255, .5);
+    --notas_Texto: rgb(0, 0, 0);
+    --notas_borda: solid 1px black;
+    --notas_Back_shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    --chamarAddNotas_hover: rgba(0, 140, 255, .5);
+    --chamarAddNotas_hover: rgb(255, 255, 255);
+    /*Painel de adicionar notas*/
+    --addNotas_Back: rgba(0, 0, 0, .8);
+    --color_disable: rgba(100, 100, 100, .5);
+}
+
+
 /*geral*/
 
 body {
-    background-color: rgb(220, 220, 220);
+    background-color: var(--fundo_01);
 }
 
 
 /*Formulario de Login/Registro*/
 
 #boxForm {
-    background-color: #133d55;
-    box-shadow: inset 0 0 1em rgb(0, 105, 175), 0 0 1em black;
+    background-color: var(--fundo_02);
+    box-shadow: var(--formularioShadow);
 }
 
 #boxForm form h1 {
-    color: rgba(100, 200, 255, 1);
+    color: var(--formularioTitulo);
 }
 
 form li {
-    background-color: rgba(0, 0, 0, .4);
-    color: rgb(243, 56, 56);
+    background-color: var(--formularioLi);
+    color: var(--formularioLi2);
 }
 
 #boxForm form p {
-    color: white;
+    color: var(--formularioTexto);
 }
 
 #boxForm form a {
-    color: white;
+    color: var(--formularioTexto);
 }
 
 #boxForm form button:hover {
-    background-color: rgba(0, 0, 0, .8);
-    color: white;
+    background-color: var(--formularioButtomHover);
+    color: var(--formularioTexto);
 }
 
 
 /*Barra Lateral*/
 
 #leftBar {
-    background-color: #133d55;
+    background-color: var(--fundo_02);
 }
 
 #info_User p {
-    color: white;
+    color: var(--leftBarInformacoes);
 }
 
 #leftBar a {
-    color: white;
+    color: var(--leftBarLinks);
 }
 
 #leftBar a:hover {
-    background-color: rgba(0, 140, 255, .5);
-    color: white;
+    background-color: var(--leftBarLinksHoverBack);
+    color: var(--leftBarLinksHover);
 }
 
 #leftBar a:active {
-    background-color: rgba(0, 140, 255, .5);
+    background-color: var(--leftBarLinksActive);
 }
 
 @media screen and (max-width: 800px) {
     #info_User p {
-        border-bottom: solid 1px black;
+        border-bottom: var(--leftBar_borderMobile);
     }
     #leftBar ul {
-        background-color: rgba(100, 100, 100, .6);
+        background-color: var(--leftBar_mobile);
     }
 }
 
@@ -71,29 +104,29 @@ form li {
 /*Notas*/
 
 .box {
-    background-color: white;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    background-color: var(--notas_Back);
+    box-shadow: var(--notas_Back_shadow);
 }
 
 .TitleBox {
-    color: rgba(0, 140, 255, .5);
+    color: var(--notas_Titulo);
 }
 
 .TextBox {
-    color: black;
-    border: solid 1px black;
+    color: var(--notas_Texto);
+    border: var(--notas_borda);
+}
+
+#setVisible-insertNewNote:hover {
+    background-color: var(--chamarAddNotas_hover_back);
+    color: var(--chamarAddNotas_hover);
 }
 
 
 /*Formulario de Add Nota*/
 
 #panel_addNote form {
-    background-color: rgba(0, 0, 0, .8);
-}
-
-#setVisible-insertNewNote:hover {
-    background-color: rgba(0, 140, 255, .5);
-    color: white;
+    background-color: var(--addNotas_Back);
 }
 
 #panel_addNote form p {
@@ -106,11 +139,11 @@ form li {
 }
 
 #enviarNote:disabled {
-    background-color: rgba(70, 70, 70, .5);
-    color: rgba(100, 100, 100, .5);
+    background-color: var(--color_disable);
+    color: var(--color_disable);
 }
 
 #enviarNote:disabled:hover {
-    background-color: rgba(70, 70, 70, .5);
-    color: rgba(100, 100, 100, .5);
+    background-color: var(--color_disable);
+    color: var(--color_disable);
 }
