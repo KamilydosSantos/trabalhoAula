@@ -1,52 +1,38 @@
 :root {
-    /*Principais        */
-    --fundo_01: rgb(220, 220, 220);
-    --fundo_02: rgb(21, 72, 102);
-    /*Formulario login/registro     */
-    --formularioTitulo: rgba(0, 140, 255, .5);
+    /*THEMA*/
+    --corBase_01: rgb(220, 220, 220);
+    --corBase_02: rgb(255, 255, 255);
+    --corBase_03: rgba(0, 0, 0, .8);
+    --corBase_04: rgba(100, 100, 100, .6);
+    --corPrincipal_01: rgb(21, 72, 102);
+    --corPrincipal_02: rgba(0, 140, 255, .5);
     --formularioLi: rgba(0, 0, 0, .4);
     --formularioLi2: rgb(243, 56, 56);
-    --formularioTexto: rgb(255, 255, 255);
-    --formularioButtomHover: rgba(0, 0, 0, .8);
-    --formularioShadow: inset 0 0 1em rgb(21, 72, 102), 0 0 1em black;
-    /*Barra lateral      */
-    --leftBarInformacoes: rgb(255, 255, 255);
-    --leftBarLinks: rgb(255, 255, 255);
-    --leftBarLinksHover: rgb(255, 255, 255);
-    --leftBarLinksHoverBack: rgba(0, 140, 255, .5);
-    --leftBarLinksActive: rgba(0, 140, 255, .5);
-    --leftBar_borderMobile: solid 1px black;
-    --leftBar_mobile: rgba(100, 100, 100, .6);
-    /*Painel de Notas*/
-    --notas_Back: rgb(255, 255, 255);
-    --notas_Titulo: rgba(0, 140, 255, .5);
     --notas_Texto: rgb(0, 0, 0);
-    --notas_borda: solid 1px black;
+    /*Sombras e bordas - a principio, não mecher!*/
+    --formularioShadow: inset 0 0 1em var(--corPrincipal_01) 0 0 1em black;
     --notas_Back_shadow: 0 0 1em rgba(0, 0, 0, 0.2);
-    --chamarAddNotas_hover: rgb(21, 72, 102);
-    --chamarAddNotas_hover_back: rgb(255, 255, 255);
-    /*Painel de adicionar notas*/
-    --addNotas_Back: rgba(0, 0, 0, .8);
-    --color_disable: rgba(100, 100, 100, .5);
+    --leftBar_borderMobile: solid 1px var(--corBase_03);
+    --notas_borda: solid 1px var(--corBase_03);
 }
 
 
 /*geral*/
 
 body {
-    background-color: var(--fundo_01);
+    background-color: var(--corBase_01);
 }
 
 
 /*Formulario de Login/Registro*/
 
 #boxForm {
-    background-color: var(--fundo_02);
+    background-color: var(--corPrincipal_01);
     box-shadow: var(--formularioShadow);
 }
 
 #boxForm form h1 {
-    color: var(--formularioTitulo);
+    color: var(--corPrincipal_02);
 }
 
 form li {
@@ -55,40 +41,40 @@ form li {
 }
 
 #boxForm form p {
-    color: var(--formularioTexto);
+    color: var(--corBase_02);
 }
 
 #boxForm form a {
-    color: var(--formularioTexto);
+    color: var(--corBase_02);
 }
 
 #boxForm form button:hover {
-    background-color: var(--formularioButtomHover);
-    color: var(--formularioTexto);
+    background-color: var(--corBase_03);
+    color: var(--corBase_02);
 }
 
 
 /*Barra Lateral*/
 
 #leftBar {
-    background-color: var(--fundo_02);
+    background-color: var(--corPrincipal_01);
 }
 
 #info_User p {
-    color: var(--leftBarInformacoes);
+    color: var(--corBase_02);
 }
 
 #leftBar a {
-    color: var(--leftBarLinks);
+    color: var(--corBase_02);
 }
 
 #leftBar a:hover {
-    background-color: var(--leftBarLinksHoverBack);
-    color: var(--leftBarLinksHover);
+    background-color: var(--corPrincipal_02);
+    color: var(--corBase_02);
 }
 
 #leftBar a:active {
-    background-color: var(--leftBarLinksActive);
+    background-color: var(--corPrincipal_02);
 }
 
 @media screen and (max-width: 800px) {
@@ -96,7 +82,7 @@ form li {
         border-bottom: var(--leftBar_borderMobile);
     }
     #leftBar ul {
-        background-color: var(--leftBar_mobile);
+        background-color: var(--corBase_04);
     }
 }
 
@@ -104,12 +90,12 @@ form li {
 /*Notas*/
 
 .box {
-    background-color: var(--notas_Back);
+    background-color: var(--corBase_02);
     box-shadow: var(--notas_Back_shadow);
 }
 
 .TitleBox {
-    color: var(--notas_Titulo);
+    color: var(--corPrincipal_02);
 }
 
 .TextBox {
@@ -123,41 +109,41 @@ form li {
 }
 
 .buttons a:hover {
-    background-color: var(--chamarAddNotas_hover);
-    color: var(--notas_Back);
+    background-color: var(--corPrincipal_01);
+    color: var(--corBase_02);
 }
 
 #setVisible-insertNewNote {
-    background-color: var(--chamarAddNotas_hover_back);
+    background-color: var(--corBase_02);
 }
 
 #setVisible-insertNewNote:hover {
-    background-color: var(--chamarAddNotas_hover);
-    color: var(--notas_Back);
+    background-color: var(--corPrincipal_01);
+    color: var(--corBase_02);
 }
 
 
 /*Formulario de Add Nota*/
 
 #panel_addNote form {
-    background-color: var(--addNotas_Back);
+    background-color: var(--corBase_03);
 }
 
 #panel_addNote form p {
-    color: white;
+    color: var(--corBase_02);
 }
 
 #panel_addNote form button:hover {
-    background-color: rgba(0, 140, 255, .5);
-    color: white;
+    background-color: var(--corPrincipal_02);
+    color: var(--corBase_02);
 }
 
 #enviarNote:disabled {
-    background-color: var(--color_disable);
-    color: var(--color_disable);
+    background-color: var(--corBase_04);
+    color: var(--corBase_04);
 }
 
 #enviarNote:disabled:hover {
-    background-color: var(--color_disable);
-    color: var(--color_disable);
+    background-color: var(--corBase_04);
+    color: var(--corBase_04);
 }
