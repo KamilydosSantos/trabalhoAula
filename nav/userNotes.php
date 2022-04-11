@@ -41,6 +41,12 @@
 
     <header class="panel">
         <button onclick="setVisible_true()" id="setVisible-insertNewNote">ADICIONAR NOTA</button>
+        <select class="form-select" id="categoria">
+            <option value="Pessoal">Todas</option>
+            <option value="Pessoal">Pessoal</option>
+            <option value="Escola">Escola</option>
+            <option value="Trabalho">Trabalho</option>
+        </select>
     </header>
     
     <section class="panel">

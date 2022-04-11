@@ -2,7 +2,7 @@
     $cont = 0;
     do{
         $cont++;
-        $sql = "SELECT conteudo, titulo FROM user_notes WHERE user_note = '$_SESSION[id]-$cont'";
+        $sql = "SELECT conteudo, titulo, user_note FROM user_notes WHERE user_note = '$_SESSION[id]-$cont'";
         $getNote[$cont] = mysqli_fetch_array(mysqli_query($GLOBALS["connect"], $sql));
 
         if($getNote[$cont] != ""){
@@ -15,8 +15,14 @@
                     <?=  $getNote[$cont]['conteudo'] ?>
                 </p>
                 <div class="buttons">
-                    <a>Excuir</a>     
-                    <a>Editar</a>  
+                <form method="post" action="">
+                    <a href="deleteNote.php?nota=<?= $getNote[$cont]['user_note']?>">   
+                        <div class="btnExcluir" type="submit" id='btnApagar' onclick="Excluir()">Excluir</div> 
+                    </a>
+                    <a href="editNote.php?nota=<?= $getNote[$cont]['user_note']?>">
+                        <div class="btnEditar" type="submit" id='btnAlterar'>Editar</div> 
+                    </a>
+                </form>
                 </div>
             </div>
 <?php
