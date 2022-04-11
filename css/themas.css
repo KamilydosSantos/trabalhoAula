@@ -1,14 +1,14 @@
 :root {
     /*Principais        */
     --fundo_01: rgb(220, 220, 220);
-    --fundo_02: #133d55;
+    --fundo_02: rgb(21, 72, 102);
     /*Formulario login/registro     */
-    --formularioTitulo: rgba(100, 200, 255, 1);
+    --formularioTitulo: rgba(0, 140, 255, .5);
     --formularioLi: rgba(0, 0, 0, .4);
     --formularioLi2: rgb(243, 56, 56);
     --formularioTexto: rgb(255, 255, 255);
     --formularioButtomHover: rgba(0, 0, 0, .8);
-    --formularioShadow: inset 0 0 1em rgb(0, 105, 175), 0 0 1em black;
+    --formularioShadow: inset 0 0 1em rgb(21, 72, 102), 0 0 1em black;
     /*Barra lateral      */
     --leftBarInformacoes: rgb(255, 255, 255);
     --leftBarLinks: rgb(255, 255, 255);
@@ -23,8 +23,8 @@
     --notas_Texto: rgb(0, 0, 0);
     --notas_borda: solid 1px black;
     --notas_Back_shadow: 0 0 1em rgba(0, 0, 0, 0.2);
-    --chamarAddNotas_hover: rgba(0, 140, 255, .5);
-    --chamarAddNotas_hover: rgb(255, 255, 255);
+    --chamarAddNotas_hover: rgb(21, 72, 102);
+    --chamarAddNotas_hover_back: rgb(255, 255, 255);
     /*Painel de adicionar notas*/
     --addNotas_Back: rgba(0, 0, 0, .8);
     --color_disable: rgba(100, 100, 100, .5);
@@ -117,9 +117,23 @@ form li {
     border: var(--notas_borda);
 }
 
-#setVisible-insertNewNote:hover {
+.buttons a {
+    color: var(--notas_Texto);
+    border-color: var(--notas_Texto);
+}
+
+.buttons a:hover {
+    background-color: var(--chamarAddNotas_hover);
+    color: var(--notas_Back);
+}
+
+#setVisible-insertNewNote {
     background-color: var(--chamarAddNotas_hover_back);
-    color: var(--chamarAddNotas_hover);
+}
+
+#setVisible-insertNewNote:hover {
+    background-color: var(--chamarAddNotas_hover);
+    color: var(--notas_Back);
 }
 
 

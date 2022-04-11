@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400&family=Roboto&display=swap');
+
 * {
     margin: 0px;
     border: 0px;
     padding: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 html {

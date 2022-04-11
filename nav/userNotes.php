@@ -41,11 +41,11 @@
 
     <header class="panel">
         <button onclick="setVisible_true()" id="setVisible-insertNewNote">ADICIONAR NOTA</button>
-        <select class="form-select" id="categoria">
-            <option value="Pessoal">Todas</option>
-            <option value="Pessoal">Pessoal</option>
-            <option value="Escola">Escola</option>
-            <option value="Trabalho">Trabalho</option>
+        <select class="form-select" id="panelCategoria">
+            <option value="Pessoal">TODAS</option>
+            <option value="Pessoal">PESSOAL</option>
+            <option value="Escola">ESCOLA</option>
+            <option value="Trabalho">TRABALHO</option>
         </select>
     </header>
     

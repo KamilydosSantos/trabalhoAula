@@ -17,10 +17,10 @@
                 <div class="buttons">
                 <form method="post" action="">
                     <a href="deleteNote.php?nota=<?= $getNote[$cont]['user_note']?>">   
-                        <div class="btnExcluir" type="submit" id='btnApagar' onclick="Excluir()">Excluir</div> 
+                        <div class="btnExcluir" type="submit" id='btnApagar' onclick="Excluir()">EXCLUIR</div> 
                     </a>
                     <a href="editNote.php?nota=<?= $getNote[$cont]['user_note']?>">
-                        <div class="btnEditar" type="submit" id='btnAlterar'>Editar</div> 
+                        <div class="btnEditar" type="submit" id='btnAlterar'>EDITAR</div> 
                     </a>
                 </form>
                 </div>
