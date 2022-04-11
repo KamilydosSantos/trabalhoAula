@@ -1,0 +1,41 @@
+/*GERAL*/
+
+@media screen and (min-width:0px) {
+    .panelConfig {
+        max-width: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .boxConfig {
+        flex: 1 1 300px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .boxConfig img {
+        width: 100%;
+    }
+    .panelConfig p {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    #logoConfig {
+        width: 100%;
+    }
+}
+
+
+/*LAYOUT - DESKTOP*/
+
+@media screen and (min-width:800px) {
+    .panelConfig {
+        padding-left: 50px;
+        transition: padding 0.5s;
+    }
+    #leftBar:hover~.panelConfig {
+        padding-left: 300px;
+        transition: padding 0.5s;
+    }
+}

@@ -147,3 +147,10 @@ form li {
     background-color: var(--corBase_04);
     color: var(--corBase_04);
 }
+
+
+/*CONFIG*/
+
+.boxConfig {
+    background-color: var(--corBase_04);
+}
