@@ -10,6 +10,7 @@
             <li><a href="../nav/userNotes.php">INDIVIDUAIS</a></li>
             <li><a href="">COLETIVAS</a></li>
             <li><a href="../nav/config.php">CONFIGURAÇÕES</a></li>
+            <li><a href="../nav/sobre.php">SOBRE</a></li>
             <li><a href="../nav/loginPage.php">LOGOUT</a></li>
         </ul>
     </nav>

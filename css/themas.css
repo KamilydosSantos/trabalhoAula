@@ -77,15 +77,6 @@ form li {
     background-color: var(--corPrincipal_02);
 }
 
-@media screen and (max-width: 800px) {
-    #info_User p {
-        border-bottom: var(--leftBar_borderMobile);
-    }
-    #leftBar ul {
-        background-color: var(--corBase_04);
-    }
-}
-
 
 /*Notas*/
 
@@ -101,16 +92,6 @@ form li {
 .TextBox {
     color: var(--notas_Texto);
     border: var(--notas_borda);
-}
-
-.buttons a {
-    color: var(--notas_Texto);
-    border-color: var(--notas_Texto);
-}
-
-.buttons a:hover {
-    background-color: var(--corPrincipal_01);
-    color: var(--corBase_02);
 }
 
 #setVisible-insertNewNote {
@@ -153,4 +134,38 @@ form li {
 
 .boxConfig {
     background-color: var(--corBase_04);
+}
+
+@media screen and (max-width: 800px) {
+    #info_User p {
+        border-bottom: var(--leftBar_borderMobile);
+    }
+    #leftBar ul {
+        background-color: var(--corBase_04);
+    }
+    .buttons a {
+        color: var(--notas_Texto);
+        border-color: var(--notas_Texto);
+    }
+    .buttons a:hover {
+        background-color: var(--corPrincipal_01);
+        color: var(--corBase_02);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #btCtrlNotas {
+        visibility: collapse;
+    }
+    .buttons:hover #btCtrlNotas {
+        visibility: visible;
+    }
+    .buttons a {
+        color: var(--notas_Texto);
+        border-color: var(--notas_Texto);
+    }
+    .buttons a:hover {
+        background-color: var(--corPrincipal_01);
+        color: var(--corBase_02);
+    }
 }

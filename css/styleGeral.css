@@ -10,6 +10,11 @@
     border-radius: 5px;
 }
 
+.buttons {
+    width: 100%;
+    height: 40px;
+}
+
 .buttons a {
     text-decoration: none;
     font-size: 13PX;
@@ -70,4 +75,57 @@
     margin: 5px 5px;
     padding: 5px;
     border-radius: 5px;
+}
+
+
+/*sobre*/
+
+.sobre {
+    padding: 40px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img_sobre {
+    max-width: 200px;
+    height: 200px;
+    margin: 0 auto 5px auto;
+    padding-bottom: 10px;
+    border-bottom: solid 1px black
+}
+
+.img_sobre img {
+    border-radius: 100%;
+    size: 100%;
+}
+
+.box_sobre {
+    max-width: 300px;
+    flex: 1 1 300px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#bt_sobre_box {
+    text-align: center;
+    width: 100%;
+    padding: 0px 0px 40px 0px;
+}
+
+#bt_sobre {
+    text-align: center;
+    border: solid 1px black;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+}
+
+#bt_sobre:hover {
+    background-color: blue;
+    color: white;
 }

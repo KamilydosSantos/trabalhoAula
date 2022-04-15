@@ -16,7 +16,7 @@
                         <?=  $getNote[$cont]['conteudo'] ?>
                     </p>
                     <div class="buttons">
-                    <form method="post" action="">
+                    <form id="btCtrlNotas" method="post" action="">
                         <a href="../php/notas_deletar.php?nota=<?= $getNote[$cont]['user_note']?>">   
                         <div class="btnExcluir" type="submit" id='btnApagar' onclick="Excluir()">EXCLUIR</div> 
                         </a>
