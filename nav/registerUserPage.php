@@ -18,7 +18,7 @@
 <body>
     <div id="boxForm">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-            <h1>CADASTRO TESTE</h1>
+            <h1>CADASTRO</h1>
             <p>NOME:</p>
             <input type="text" name="username" id="username">
             <p>E-MAIL:</p>

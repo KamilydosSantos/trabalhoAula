@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="panelConfig">
-        <p>DEFINA O TEMA QUE DESEJA UTILIZAR:</p>
+        <h3>DEFINA O TEMA QUE DESEJA UTILIZAR:</h3>
     </div>
     <div class="panelConfig">
         <buttom class="boxConfig">

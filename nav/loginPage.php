@@ -21,7 +21,7 @@
 
     <div id="boxForm">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-            <h1>LOGIN TESTE</h1>
+            <h1>LOGIN</h1>
             <p>E-MAIL:</p>
             <input type="email" name="login" id="login">
             <p>SENHA:</p>

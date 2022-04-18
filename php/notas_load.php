@@ -1,6 +1,6 @@
 <?php
     $cont = 0;
-    $getNumRows = mysqli_num_rows(mysqli_query($connect, 'SELECT `user_id` FROM `user_notes` WHERE `user_id`="1"'));
+    $getNumRows = mysqli_num_rows(mysqli_query($connect, 'SELECT `user_id` FROM `user_notes` WHERE `user_id`="'.$_SESSION['id'].'"'));
     for($i = 0; $i<$getNumRows; $i++){
         do{
             $cont++;
@@ -28,6 +28,6 @@
                 </div>
 <?php
             }
-        }while($getNote[$cont] != "");
+        }while(($getNote[$cont] == "") && ($i < $getNumRows));
     }
 ?>

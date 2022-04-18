@@ -33,6 +33,7 @@ body {
 
 #boxForm form h1 {
     color: var(--corPrincipal_02);
+    text-align: center;
 }
 
 form li {
@@ -117,6 +118,12 @@ form li {
 #panel_addNote form button:hover {
     background-color: var(--corPrincipal_02);
     color: var(--corBase_02);
+}
+
+h3{
+    margin: auto;
+    color: var(--corPrincipal_01);
+    border-bottom: 1px;
 }
 
 #enviarNote:disabled {

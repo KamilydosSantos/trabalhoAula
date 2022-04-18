@@ -20,7 +20,6 @@
     <?php require_once '../components/leftBar.php';?>
 </head>
 <body>
-    
     <section id="panel_addNote">
         <form action="../php/notas_add.php" method="POST">
             <p>Titulo da nota</p>
@@ -40,6 +39,7 @@
     </section>
 
     <header class="panel">
+        <h3>NOTAS INDIVIDUAIS</h3>
         <button onclick="setVisible_true()" id="setVisible-insertNewNote">ADICIONAR NOTA</button>
         <select class="form-select" id="panelCategoria">
             <option value="Pessoal">TODAS</option>
@@ -48,7 +48,6 @@
             <option value="Trabalho">TRABALHO</option>
         </select>
     </header>
-    
     <section class="panel">
         <?php
             require_once '../php/notas_load.php';

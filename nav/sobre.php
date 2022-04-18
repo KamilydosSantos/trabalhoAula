@@ -10,19 +10,21 @@
     <link rel="stylesheet" href="../css/layoutFlex.css">
     <link rel="stylesheet" href="../css/styleGeral.css">
     <link rel="stylesheet" href="../css/themas.css">
+    <?php require_once '../components/leftBar.php';?>
 </head>
 <body>
     <div class="sobre">
-        <p>Projeto desenvolvido para fins avaliativos da disiplina "Programação Para Web", do 4º ano do curso Integrado Técnico em Informática 
+        <h3>SOBRE O SITE</h3>
+        <p>O projeto foi desenvolvido para fins avaliativos da disiplina "Programação Para Web", do 4º ano do curso Integrado Técnico em Informática 
         do IFSUL Campus Camaquã. Alunos responsáveis pelo desenvolvimento: 
         </p>
         <div class="box_sobre">
             <div class="img_sobre">
-                <img src="../images/background.jpg">
+                <img src="../images/johann.png">
             </div>
             <div>
-                <p>Johann ...</p>
-                <p>X anos, estudante do Ensino Médio.</p>
+                <p>Johann Rocha</p>
+                <p>19 anos, estudante de Informática no IFSUL-Camaquã.</p>
             </div>
         </div>
         <div class="box_sobre">
@@ -30,17 +32,17 @@
                 <img src="https://avatars.githubusercontent.com/u/102933216?v=4">
             </div>
             <div>
-                <p>Kamily ...</p>
-                <p>X anos, estudante do Ensino Médio.</p>
+                <p>Kamily dos Santos</p>
+                <p>18 anos, estudante de Informática no IFSUL-Camaquã.</p>
             </div>
         </div>
         <div class="box_sobre">
             <div class="img_sobre">
-                <img src="../images/background.jpg">
+                <img src="https://avatars.githubusercontent.com/u/103265478?v=4">
             </div>
             <div>
-                <p>Kayana ...</p>
-                <p>X anos, estudante do Ensino Médio</p>
+                <p>Kayana da S. Lacerda</p>
+                <p>19 anos, estudante de Informática no IFSUL-Camaquã.</p>
             </div>
         </div>
         <div class="box_sobre">
@@ -49,7 +51,7 @@
             </div>
             <div>
                 <p>Thiago R. Kawski</p>
-                <p>19 anos, estudante do Ensino Médio</p>
+                <p>19 anos, estudante de Informática no IFSUL-Camaquã.</p>
             </div>
         </div>
     </div>
