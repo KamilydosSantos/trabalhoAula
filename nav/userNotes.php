@@ -27,7 +27,7 @@
             <p>Conteudo da nota</p>
             <textarea name="conteudo" id="conteudo" onkeyup="validateDate()"></textarea>
             <p>Selecione uma categoria</p>
-            <select class="form-select" id="categoria">
+            <select class="form-select" id="categoria" name="categoria">
                 <option value="Pessoal">Pessoal</option>
                 <option value="Escola">Escola</option>
                 <option value="Trabalho">Trabalho</option>

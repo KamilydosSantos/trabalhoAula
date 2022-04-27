@@ -9,7 +9,7 @@
             $cont++;
             $sql = "SELECT conteudo FROM user_notes WHERE user_note = '$_SESSION[id]-$cont'";
             $getNote[$cont] = mysqli_fetch_array(mysqli_query($GLOBALS["connect"], $sql));
-        }while(($getNote[$cont] != "")&&($i < $getNumRows));
+        }while(($getNote[$cont] == "")&&($i < $getNumRows));
     }
     $id_user = $_SESSION["id"];
     $id_note = $_SESSION["id"].'-'.$cont;
