@@ -10,6 +10,13 @@
     border-radius: 5px;
 }
 
+.CategoryBox {
+    margin-left: 90%;
+    padding: 3px;
+    text-align: center;
+    border-radius: .30rem;
+}
+
 .buttons {
     width: 100%;
     height: 40px;
@@ -33,7 +40,7 @@
 #panelCategoria {
     padding: 8px 40px 8px 8px;
     border-radius: 5px;
-    margin: 5px auto 5px 20px;
+    margin: 5px 50px 5px 20px;
 }
 
 #setVisible-insertNewNote {
@@ -79,14 +86,6 @@
 
 
 /*sobre*/
-
-.sobre {
-    padding: 40px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .img_sobre {
     max-width: 200px;

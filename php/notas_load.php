@@ -1,11 +1,27 @@
 <?php
     $cont = 0;
-    $getNumRows = mysqli_num_rows(mysqli_query($connect, 'SELECT `user_id` FROM `user_notes` WHERE `user_id`="'.$_SESSION['id'].'"'));
+    
+    //verifica se há categoria especifica e reduz scopo da busca
+    if(isset($_POST['panelCategoria'])){
+        $categoria = $_POST['panelCategoria'];
+        $getNumRows = mysqli_num_rows(mysqli_query($connect, 'SELECT `user_id` FROM `user_notes` WHERE `user_id`="'.$_SESSION['id'].'" AND `categoria` = "'.$categoria.'"'));
+    }else{
+        $getNumRows = mysqli_num_rows(mysqli_query($connect, 'SELECT `user_id` FROM `user_notes` WHERE `user_id`="'.$_SESSION['id'].'"'));
+    }
     for($i = 0; $i<$getNumRows; $i++){
         do{
             $cont++;
-            $sql = "SELECT conteudo, titulo, user_note, categoria FROM user_notes WHERE user_note = '$_SESSION[id]-$cont'";
+            
+            //Seleciona categoria
+            if(isset($_POST['panelCategoria'])){
+                $categoria = $_POST['panelCategoria'];
+                $sql = "SELECT conteudo, titulo, user_note, categoria FROM user_notes WHERE user_note = '$_SESSION[id]-$cont' AND `categoria` = '$categoria'";
+            }else{
+                $sql = "SELECT conteudo, titulo, user_note, categoria FROM user_notes WHERE user_note = '$_SESSION[id]-$cont'";
+            }
+
             $getNote[$cont] = mysqli_fetch_array(mysqli_query($GLOBALS["connect"], $sql));
+            
             if($getNote[$cont] != ""){
 ?>
                 <div class="box">
@@ -23,8 +39,8 @@
                         <a href="../php/notas_deletar.php?nota=<?= $getNote[$cont]['user_note']?>">   
                         <div class="btnExcluir" type="submit" id='btnApagar' onclick="Excluir()">EXCLUIR</div> 
                         </a>
-                        <a>
-                            <div class="btnEditar" type="submit" id='btnAlterar' onclick="setVisible_true()" id="setVisible-editNote">EDITAR</div> 
+                        <a href="../nav/editNote.php?nota=<?= $getNote[$cont]['user_note']?>"> 
+                            <div class="btnEditar" id='btnAlterar'>EDITAR</div> 
                         </a>
                     </form>
                     </div>

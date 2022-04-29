@@ -95,13 +95,24 @@ form li {
     border: var(--notas_borda);
 }
 
+.CategoryBox {
+    color: var(--corBase_02);
+    background-color: var(--corPrincipal_02);
+}
+
+#panelCategoria {
+    background-color: var(--corPrincipal_01);
+    color: var(--corBase_02);
+}
+
 #setVisible-insertNewNote {
-    background-color: var(--corBase_02);
+    background-color: var(--corPrincipal_01);
+    color: var(--corBase_02);
 }
 
 #setVisible-insertNewNote:hover {
-    background-color: var(--corPrincipal_01);
-    color: var(--corBase_02);
+    background-color: var(--corBase_02);
+    color: var(--corPrincipal_01);
 }
 
 
@@ -120,7 +131,7 @@ form li {
     color: var(--corBase_02);
 }
 
-h3{
+h3 {
     margin: auto;
     color: var(--corPrincipal_01);
     border-bottom: 1px;

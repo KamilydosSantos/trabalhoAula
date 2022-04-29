@@ -41,12 +41,14 @@
     <header class="panel">
         <h3>NOTAS INDIVIDUAIS</h3>
         <button onclick="setVisible_true()" id="setVisible-insertNewNote">ADICIONAR NOTA</button>
-        <select class="form-select" id="panelCategoria">
-            <option value="Pessoal">TODAS</option>
-            <option value="Pessoal">PESSOAL</option>
-            <option value="Escola">ESCOLA</option>
-            <option value="Trabalho">TRABALHO</option>
-        </select>
+        <form action="" method="POST">
+            <select onchange="this.form.submit()" class="form-select" id="panelCategoria" name="panelCategoria">
+                <option value="Todas">TODAS</option>
+                <option value="Pessoal">PESSOAL</option>
+                <option value="Escola">ESCOLA</option>
+                <option value="Trabalho">TRABALHO</option>
+            </select>
+        </form>
     </header>
     <section class="panel">
         <?php
