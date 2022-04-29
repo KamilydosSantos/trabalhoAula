@@ -16,11 +16,13 @@
 	$sql = $sql . " WHERE user_note ='" . $_POST['user_note'] . "'";
 
     $executaQuery = mysqli_query($GLOBALS["connect"], $sql);
-
-    if (mysqli_affected_rows($connect)!= 0) {        
+    
+    header("Location: ../nav/userNotes.php?nota=" . $_POST['user_note']);
+    
+    /*if (mysqli_affected_rows($connect)!= 0) {        
         header("Location: ../nav/userNotes.php");
     }else{
         header("Location: ../nav/editNote.php?nota=" . $_POST['user_note']);
-    }
+    }*/
     
 ?>

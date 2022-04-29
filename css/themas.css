@@ -126,7 +126,18 @@ form li {
     color: var(--corBase_02);
 }
 
+#panel_addNote form a {
+    background-color: var(--corBase_02);
+    color: var(--corBase_03);
+
+}
+
 #panel_addNote form button:hover {
+    background-color: var(--corPrincipal_02);
+    color: var(--corBase_02);
+}
+
+#panel_addNote form a:hover {
     background-color: var(--corPrincipal_02);
     color: var(--corBase_02);
 }
@@ -134,7 +145,6 @@ form li {
 h3 {
     margin: auto;
     color: var(--corPrincipal_01);
-    border-bottom: 1px;
 }
 
 #enviarNote:disabled {

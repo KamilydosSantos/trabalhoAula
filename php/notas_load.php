@@ -25,9 +25,11 @@
             if($getNote[$cont] != ""){
 ?>
                 <div class="box">
-                    <p class="CategoryBox" id="<?=$getNote[$cont]['user_note'] . 'categoria'  ?>">
-                        <?=  $getNote[$cont]['categoria'] ?>
-                    </p>
+                    <div class="CategoryTag">
+                        <p class="CategoryBox" id="<?=$getNote[$cont]['user_note'] . 'categoria'  ?>">
+                            <?=  $getNote[$cont]['categoria'] ?>
+                        </p>
+                    </div>
                     <p class="TitleBox" id="<?=$getNote[$cont]['user_note'] . 'titulo'  ?>">
                         <?=  $getNote[$cont]['titulo'] ?>
                     </p>

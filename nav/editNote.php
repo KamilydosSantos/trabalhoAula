@@ -1,6 +1,8 @@
 <?php
     //conexão com banco de dados: 
     require_once '../php/connect_bd.php';
+    session_start();
+    $dados = mysqli_fetch_array(mysqli_query($connect, 'SELECT * FROM users WHERE user_id = '.$_SESSION["id"]));
 
     $sql = "SELECT * FROM user_notes WHERE user_note='" . $_GET['nota']  . "' ";
     $getNote = mysqli_fetch_assoc(mysqli_query($GLOBALS["connect"], $sql));
@@ -24,7 +26,7 @@
     <?php require_once '../components/leftBar.php';?>
 </head>
 <body>
-    <section id="panel_addNote" style = "visibility: visible; backdrop-filter: none; z-index: 1;">
+    <section id="panel_addNote" style = "visibility: visible;">
         <form action="../php/notas_editar.php" method="POST">
             <input type="hidden" name="user_note" value="<?= $_GET['nota'] ?>">
             <p>Titulo da nota</p>
@@ -38,7 +40,7 @@
                 <option value="Trabalho"<?php if($getNote['categoria'] == 'Trabalho'){ echo ' selected="selected"'; } ?>>Trabalho</option>
             </select>
             <p id="aviso"></p>
-            <button type="button">CANCELAR</button>
+            <a href="userNotes.php" >CANCELAR</a>
             <button type="submit" id="enviarNote" name="enviarNote">SALVAR</button>
         </form>
     </section>

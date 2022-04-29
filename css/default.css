@@ -28,10 +28,3 @@ a {
 img {
     width: 100%;
 }
-
-#sobre {
-    display: flex;
-    width: 100%;
-    padding: 100%;
-    align-items: center;
-}
